@@ -1,0 +1,87 @@
+:root {
+	--background: #222831;
+	--text-color: white; /* #ECEFF4 */
+	--help-color: #d2cbcbc8;
+}
+
+body {
+	/* margin-top: 20vh; */
+	margin-top: 1px;
+	background-color: var(--background);
+	color: var(--text-color);
+	min-width: 550px;
+	font-family: Raleway, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 400;
+}
+
+.logo-container {
+	text-align: center;
+	margin-top: 3rem;
+	margin-bottom: 6rem;
+}
+
+.logo {
+	border-radius: 10px;
+	height: 150px;
+	margin-top: 5rem;
+}
+
+.promos-text {
+	font-size: 0.8rem;
+	color: #F8F9FA60;
+}
+
+.main-form {
+	margin-bottom: 150px;
+}
+
+.link {
+	text-decoration: none;
+	color: #ffd70080;
+}
+
+#spinner:not([hidden]) {
+	position: fixed;
+	z-index: 999;
+	overflow: visible;
+	margin-right: auto;
+	margin-left: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#spinner::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	/* background-color: rgba(0, 0, 0, 0.3); */
+	background-color: rgba(255, 255, 255, .5);
+}
+
+#spinner::after {
+	content: '';
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border: 2px solid #f3f3f3;
+	border-top: 3px solid #f25a41;
+	border-radius: 100%;
+	will-change: transform;
+	animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
